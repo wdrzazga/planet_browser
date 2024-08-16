@@ -19,11 +19,9 @@ while running:
         if event.type == pygame.QUIT or event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
             running = False
         elif event.type == pygame.KEYDOWN and event.key == pygame.K_RIGHT:
-            print("previous planet")
             current_planet = (current_planet + 1) % len(preg.planets)
             preg.planets[current_planet].display(screen)
         elif event.type == pygame.KEYDOWN and event.key == pygame.K_LEFT:
-            print("next planet")
             current_planet -= 1
             if current_planet < 0:
                 current_planet = len(preg.planets) - 1
